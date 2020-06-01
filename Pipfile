@@ -17,6 +17,7 @@ django-sendgrid-v5 = "*"
 whitenoise = "*"
 django-on-heroku = "*"
 gunicorn = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.8"
