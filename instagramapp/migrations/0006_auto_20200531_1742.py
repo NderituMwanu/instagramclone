@@ -8,7 +8,6 @@ class Migration(migrations.Migration):
     dependencies = [
         ('instagramapp', '0005_auto_20200530_1928'),
     ]
-
     operations = [
         migrations.CreateModel(
             name='Profile',
