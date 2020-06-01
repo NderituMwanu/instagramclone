@@ -1,42 +1,46 @@
 {% extends 'insta/base.html' %}
 
 {% block content %}
-    {% for User in Users %}
-    <!-- <p> {{User.author}} </p>
+{% for User in Users %}
+<!-- <p> {{User.author}} </p>
     <p> {{User.caption}} </p> -->
-    <div class="card">
-        <div class="card_header">
-            <div class="profile_image">
+<div class="card">
+    <div class="card_header">
+        <div class="profile_image">
 
-            </div>
-            <div class="post_info">
-                <div class="post_name"> {{User.author}} </div>
-                <div class="post_location"><i class="fas fa-map-marker-alt"></i> {{User.location}} </div>
-            </div>
-            <div class="post_options"><i class="fas fa-ellipsis-h"></i></div>
         </div>
-        <div class="post_image">
-            {% if User.image %}
-            <img src= " {{User.image.url}} ">
-            {% endif %}
+        <div class="post_info">
+            <div class="post_name"> {{User.author}} </div>
+            <div class="post_location"><i class="fas fa-map-marker-alt"></i> {{User.location}} </div>
         </div>
-        <div class="engagement">
-            <a href=""><i class="far fa-heart"></i></a>
-            <a href=""><i class="far fa-comment"></i></a>
-            <a href=""><i class="far fa-paper-plane"></i></a>
-            <a href=""><i class="far fa-bookmark"></i></a>
-        </div>
-       <div class="likes">
-           <a href="">345</a>
-       </div>
-       <div class="caption">
-           <a href=""> <h3> {{ User.author }} </h3> </a>
-           <span> <p> {{User.caption}} </p> </span>
-       </div>
-       <div class="time_posted">
-           {{ User.post_date | timesince }} ago
-       </div> 
+        <div class="post_options"><i class="fas fa-ellipsis-h"></i></div>
     </div>
-    {% endfor %}
+    <div class="post_image">
+        {% if User.image %}
+        <img src=" {{User.image.url}} ">
+        {% endif %}
+    </div>
+    <div class="engagement">
+        <a href=""><i class="far fa-heart"></i></a>
+        <a href=""><i class="far fa-comment"></i></a>
+        <a href=""><i class="far fa-paper-plane"></i></a>
+        <a href=""><i class="far fa-bookmark"></i></a>
+    </div>
+    <div class="likes">
+        <a href="">345</a>
+    </div>
+    <div class="caption">
+        <a href="">
+            <h3> {{ User.author }} </h3>
+        </a>
+        <span>
+            <p> {{User.caption}} </p>
+        </span>
+    </div>
+    <div class="time_posted">
+        {{ User.post_date | timesince }} ago
+    </div>
+</div>
+{% endfor %}
 
 {% endblock %}
