@@ -1,5 +1,3 @@
-# from django.core.mail import send_mail, BadHeaderError
-# from django.http import HttpResponse
 from .emails import send_welcome_email
 from django.shortcuts import render, redirect
 from .models import User
@@ -9,6 +7,7 @@ from django.views.generic import (
     ListView,
     CreateView,
 )
+
 
 class postList(ListView):
     template_name = "insta/post_list.html"
@@ -34,15 +33,6 @@ def register(response):
     if response.method == "POST":
         form = Registration(response.POST)
         if form.is_valid():
-            
-            # name = form.cleaned_data['gerald']
-            # email = form.cleaned_data['mwanugerald@gmail.com']
-
-            # recepient = EmailRecepient(name = name,email =email)
-            # recepient.save()
-            # send_welcome_email(name,email)
-            # HttpResponseRedirect('register')
-
             form.save()
         return redirect('/login')
         
