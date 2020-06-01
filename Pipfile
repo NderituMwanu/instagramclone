@@ -6,6 +6,17 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+django = "*"
+pillow = "*"
+python-decouple = "*"
+django-registration = "*"
+psycopg2-binary = "*"
+django-crispy-forms = "*"
+sendgrid = "*"
+django-sendgrid-v5 = "*"
+whitenoise = "*"
+django-on-heroku = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"

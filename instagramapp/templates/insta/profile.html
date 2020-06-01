@@ -1,0 +1,27 @@
+{% extends 'insta/base.html' %}
+
+
+{% block title %}
+Profile
+{% endblock %}
+{% block content %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<div class="container">
+	<div class="jumbotron">
+		<button class="btn btn-success"><a href="/new">Make Post</a></button>
+		<button class="btn btn-warning"><a href="/logout"> Logout </a></button>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Name: {{User.username}} <br>
+			Bio: No Bio {{Profile.}}<br>
+			Followers: 0{{Profile.followers}}<br>
+			Following: 0 {{Profile.following}}<br>
+			Posts: 0{{Profile.posts}}<br>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
