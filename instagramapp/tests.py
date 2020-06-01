@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Profile, User
 
+
 # Create your tests here.
 class User(TestCase):
     def setUp(self):
@@ -17,6 +18,7 @@ class User(TestCase):
     #Testing the delete method
     def test_delete_method(self):
         self.post.delete_image()
+
 
 class Profile(TestCase):
     def setUp(self):
