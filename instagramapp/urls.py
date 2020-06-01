@@ -22,6 +22,7 @@ from .views import (
     PostCreatedView
 )
 
+
 app_name = 'instagramapp'
 urlpatterns = [
     path('admin/', admin.site.urls),  
